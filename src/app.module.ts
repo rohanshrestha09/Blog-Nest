@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { BlogModule } from './blog/blog.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 const path = require('path');
+require('dotenv').config();
 
 @Module({
   imports: [

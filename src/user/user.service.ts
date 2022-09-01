@@ -34,7 +34,7 @@ export class UserService {
         email,
         password: hashedPassword,
       });
-      const token = jwt.sign({ id: user._id }, process.env.TOKEN, {
+      const token = jwt.sign({ id: user._id }, process.env.JWT_TOKEN, {
         expiresIn: '90min',
       });
       return res.status(200).json(token);
@@ -54,7 +54,7 @@ export class UserService {
 
     if (!isMatched) return res.status(403).json('Invalid Password');
 
-    const token = jwt.sign({ id: user._id }, process.env.TOKEN, {
+    const token = jwt.sign({ id: user._id }, process.env.JWT_TOKEN, {
       expiresIn: '90min',
     });
     if (isMatched) return res.status(200).json(token);
@@ -68,7 +68,7 @@ export class UserService {
     if (!token) return res.status(400).json('Not authorized');
 
     try {
-      const decoded: string = jwt.verify(token, process.env.TOKEN);
+      const decoded: string = jwt.verify(token, process.env.JWT_TOKEN);
 
       const user = await this.userModel
         .findById(new mongoose.Types.ObjectId(decoded))
