@@ -1,4 +1,4 @@
-# BlogSansar
+# BlogSansar built with React and Nest
 
 A blogging app which lets user to login, signup, read other's blog and post their own.
 
@@ -47,8 +47,8 @@ A blogging app which lets user to login, signup, read other's blog and post thei
 ## Running Server
 
 ```bash
-  git clone https://github.com/rohanshrestha09/BlogSansar.git
-  cd BlogSansar
+  git clone https://github.com/rohanshrestha09/Blog-Nest.git
+  cd Blog-Nest
   npm install
   npm run start:dev
 ```
@@ -56,8 +56,8 @@ A blogging app which lets user to login, signup, read other's blog and post thei
 ## Running Client
 
 ```bash
-  git clone https://github.com/rohanshrestha09/BlogSansar.git
-  cd BlogSansar/client
+  git clone https://github.com/rohanshrestha09/Blog-Nest.git
+  cd Blog-Nest/client
   npm install
   npm run start
 ```
@@ -68,7 +68,7 @@ A blogging app which lets user to login, signup, read other's blog and post thei
 - TailwindCSS
 - TypeScript
 - Nest
-- Nodejs
+- Node
 - MongoDB
 
 ## Things i learnt after creating this project
